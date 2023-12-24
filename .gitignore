@@ -1,7 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+/corp/node_modules/
+/discuss/node_modules/
+/snippets/node_modules/
 /.pnp
 .pnp.js
 .yarn/install-state.gz
@@ -10,8 +12,15 @@
 /coverage
 
 # next.js
-/.next/
+/corp/.next/
+/discuss/.next/
+/snippets/.next/
 /out/
+
+# vscode
+/corp/.vscode/
+/discuss/.vscode/
+/snippets/.vscode/
 
 # production
 /build
@@ -26,8 +35,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env*.local
 .env
+.env.local
 
 # vercel
 .vercel

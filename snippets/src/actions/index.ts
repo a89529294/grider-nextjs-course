@@ -9,7 +9,7 @@ export async function editSnippet(id: number, code: string) {
     data: { code },
   });
 
-  // revalidatePath(`/snippets/${id}`);
+  revalidatePath(`/snippets/${id}`);
   redirect(`/snippets/${id}`);
 }
 
@@ -18,8 +18,8 @@ export async function deleteSnippet(id: number) {
     where: { id },
   });
 
-  // revalidatePath(`/snippets/${id}`);
-  // revalidatePath("/");
+  revalidatePath(`/snippets/${id}`);
+  revalidatePath("/");
   redirect(`/`);
 }
 
@@ -57,6 +57,6 @@ export async function createSnippet(
   }
 
   // redirect user back to home route
-  // revalidatePath("/");
+  revalidatePath("/");
   redirect("/");
 }
